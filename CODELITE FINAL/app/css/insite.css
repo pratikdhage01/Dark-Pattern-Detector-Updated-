@@ -1,0 +1,61 @@
+/* Style for highlighted elements that contain dark patterns */
+.insite-highlight {
+    position: relative;
+    background: #97f760; /* Light green color for highlighting */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+    transition: background-color 0.3s ease; /* Smooth transition for color changes */
+}
+
+/* Tooltip container that appears when the user hovers over a highlighted element */
+.insite-highlight .insite-highlight-body {
+    font-size: 12px;
+    font-weight: 150;
+    margin: 0;
+    width: 200px;
+    color: #FFFFFF;
+    background-color: #041F30; /* Dark background for contrast */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease; /* Smooth transition for appearance */
+}
+
+/* Header of the tooltip that shows the type of dark pattern */
+.insite-highlight-body .modal-header {
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 3px 2px -1px #00131f; /* Subtle shadow for a 3D effect */
+    background-color: #05283D; /* Darker color for the header */
+    padding: 3px;
+}
+
+/* Header text styling within the tooltip */
+.insite-highlight-body .modal-header h1 {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Content area of the tooltip that shows the description of the dark pattern */
+.insite-highlight-body .modal-content {
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 150;
+    color: #D8D8D8; /* Light gray text for readability */
+}
+
+/* Show the tooltip text when hovering over the highlighted element */
+.insite-highlight:hover .insite-highlight-body {
+    visibility: visible; /* Make the tooltip visible */
+    opacity: 1; /* Fully opaque */
+}
+
+/* Style for changing background color to red when a dark pattern element is clicked */
+.insite-highlight:active {
+    background-color: #FF0000;
+}
